@@ -34,7 +34,6 @@ class SliderListTile extends StatelessWidget {
   final ListTileControlAffinity controlAffinity;
   final bool? applyCupertinoTheme;
   final String Function(double)? formatLabel;
-  final int bigTickEvery;
 
   const SliderListTile({
     super.key,
@@ -65,7 +64,6 @@ class SliderListTile extends StatelessWidget {
     this.selected = false,
     this.controlAffinity = ListTileControlAffinity.platform,
     this.formatLabel,
-    this.bigTickEvery = 1,
   })  : _sliderListTileType = _SliderListTileType.material,
         applyCupertinoTheme = false,
         assert(min <= max),
@@ -103,7 +101,6 @@ class SliderListTile extends StatelessWidget {
     this.selected = false,
     this.controlAffinity = ListTileControlAffinity.platform,
     this.formatLabel,
-    this.bigTickEvery = 1,
   })  : _sliderListTileType = _SliderListTileType.adaptive,
         assert(min <= max),
         assert(value >= min && value <= max, 'Value $value is not between minimum $min and maximum $max'),
